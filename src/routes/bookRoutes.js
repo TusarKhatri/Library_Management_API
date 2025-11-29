@@ -1,4 +1,3 @@
-// src/routes/bookRoutes.js
 import express from "express";
 import auth from "../middleware/auth.js";
 import role from "../middleware/role.js";
@@ -13,7 +12,7 @@ import {
 
 const router = express.Router();
 
-router.post("/", auth, role(["admin"]), createBook);       // ✅ POST for creating
+router.post("/", auth, role(["admin"]), createBook);
 router.put("/:id", auth, role(["admin"]), updateBook);
 router.delete("/:id", auth, role(["admin"]), deleteBook);
 
